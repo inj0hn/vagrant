@@ -36,3 +36,6 @@ sudo source /etc/profile.d/mavenenv.sh
 -- install git
 sudo apt-get install git-core -y
 
+-- install terminator CLI
+sudo apt-get install terminator -y
+
