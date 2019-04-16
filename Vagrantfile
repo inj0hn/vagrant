@@ -1,5 +1,13 @@
 $script = <<-SCRIPT
-echo provisioning machine...
+echo installing guest additions...
+sudo apt-get install build-essential linux-headers-server -y
+sudo mount /dev/cdrom /media/cdrom
+sudo /media/cdrom/VBoxLinuxAdditions.run
+sudo umount /media/cdrom
+sudo apt-get clean
+sudo shutdown -r now
+
+echo updating distro...
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get install curl -y
